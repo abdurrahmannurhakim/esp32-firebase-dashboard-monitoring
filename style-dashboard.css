@@ -1,0 +1,199 @@
+/* General styles for the dashboard */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 10%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #ccc;
+    transition: width 0.3s ease;
+    overflow: hidden; /* Hide the sidebar when closed */
+}
+
+.time-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.time-input select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+
+.sidebar.closed {
+    width: 0; /* Collapse the sidebar when closed */
+}
+
+.sidebar h3 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li:hover {
+    background-color: #575757;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.main-image-container {
+    width: 65%; /* Adjust width to be proportional to combined box width */
+    margin: 0 auto 20px auto; /* Center align and add bottom margin */
+    padding: 10px; /* Add padding for visual spacing */
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align boxes to the top */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 22%; /* 22% width ensures four boxes fit in a row */
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adding space between rows */
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box h3 {
+    margin-top: 10px; /* Space between title and image */
+}
+
+.box-image {
+    width: 80%;
+    height: 200px; /* Adjust image height */
+    object-fit: cover; /* Image fills the box without changing aspect ratio */
+}
+
+.show-more-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.show-more {
+    cursor: pointer;
+    color: blue;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.box button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: blue;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.food-leftover {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#add-fish-form {
+    margin-bottom: 20px;
+}
+
+#add-fish-form input {
+    text-align: center;
+}
+
+#add-fish-form button {
+    text-align: center;
+}
+
+/* Additions for interactivity */
+.sidebar:hover {
+    width: 20%; /* Expand sidebar on hover */
+}
+
+.sidebar.closed:hover {
+    width: 0; /* Keep sidebar collapsed on hover when closed */
+}
