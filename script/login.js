@@ -1,16 +1,27 @@
-       // Import Firebase libraries
+        /*
+            Name        : login.js
+            Author      : Abdurrahman Nurhakim
+            Version     : 1.0
+            Copyright   : Your copyright notice
+            Description : Login page, with token (for cookies and database checking process) for scurity system. This web was intergrated with firebase realtime database.
+        */
+
+
+        // Import Firebase libraries
        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
        import { getDatabase, ref, get, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
        // Your web app's Firebase configuration
        const firebaseConfig = {
-           authDomain: "fish-feeding-c9aeb.firebaseapp.com",
-           databaseURL: "https://fish-feeding-c9aeb-default-rtdb.firebaseio.com",
-           projectId: "fish-feeding-c9aeb",
-           storageBucket: "fish-feeding-c9aeb.appspot.com",
-           messagingSenderId: "345413774132",
-           appId: "1:345413774132:web:86dd1828a68f1b29ec1361"
-       };
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+    
 
        // Initialize Firebase
        const app = initializeApp(firebaseConfig);

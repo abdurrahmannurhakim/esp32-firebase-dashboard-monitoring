@@ -1,7 +1,15 @@
+/*
+    Name        : change_account.js
+    Author      : Abdurrahman Nurhakim
+    Version     : 1.0
+    Copyright   : Your copyright notice
+    Description : Change password, with database password checking process for scurity system. This web was intergrated with firebase realtime database.
+*/
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getDatabase, ref, get, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-        // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_AUTH_DOMAIN",
