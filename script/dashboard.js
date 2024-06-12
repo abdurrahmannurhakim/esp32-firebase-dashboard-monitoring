@@ -4,12 +4,13 @@
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
-            authDomain: "fish-feeding-c9aeb.firebaseapp.com",
-            databaseURL: "https://fish-feeding-c9aeb-default-rtdb.firebaseio.com",
-            projectId: "fish-feeding-c9aeb",
-            storageBucket: "fish-feeding-c9aeb.appspot.com",
-            messagingSenderId: "345413774132",
-            appId: "1:345413774132:web:86dd1828a68f1b29ec1361"
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            databaseURL: "YOUR_DATABASE_URL",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
         };
 
         // Initialize Firebase
@@ -29,7 +30,7 @@
             if (!token) {
                 // Redirect to login page if token is not found
                 setTimeout(() => {
-                    window.location.href = 'index.html';
+                    window.location.href = '/index.html';
                 }, 2000); // 2 seconds delay
                 return;
             }
@@ -47,14 +48,14 @@
                     console.log('Token mismatch');
                     // Redirect to login page if token does not match
                     setTimeout(() => {
-                        window.location.href = 'index.html';
+                        window.location.href = '/index.html';
                     }, 2000); // 2 seconds delay
                 }
             } catch (error) {
                 console.error('Error:', error);
                 // Redirect to login page if an error occurs
                 setTimeout(() => {
-                    window.location.href = 'index.html';
+                    window.location.href = '/index.html';
                 }, 2000); // 2000 mili seconds delay
             }
         }
@@ -67,7 +68,7 @@
             // Clear the token cookie and redirect to login page
             document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = '/index.html';
             }, 500); // 500 mili seconds delay
         });
 
@@ -95,21 +96,21 @@
 
             content.innerHTML = `
                 <div class="main-image-container">
-                    <img src="/dashboard.jpg" alt="Dashboard Main Image" class="main-image">
+                    <img src="/image/dashboard.jpg" alt="Dashboard Main Image" class="main-image">
                 </div>
 
                 <div class="boxes">
                     <div class="box">
                             <h3>List User</h3>
-                            <img src="/list-user.jpg" id = "box-user-name" onclick="window.location.href='your-link-here' alt="List User Image" class="box-image">
+                            <img src="/image/list-user.jpg" id = "box-user-name" onclick="window.location.href='your-link-here' alt="List User Image" class="box-image">
                     </div>
                     <div class="box">
                             <h3>Add Fish</h3>
-                            <img src="/fish.jpg" id = "box-schedule" onclick="window.location.href='your-link-here' alt="Schedule Image" class="box-image" >
+                            <img src="/image/fish.jpg" id = "box-schedule" onclick="window.location.href='your-link-here' alt="Schedule Image" class="box-image" >
                     </div>
                     <div class="box">
                             <h3>Food Leftovers</h3>
-                            <img src="/food.jpg" id = "box-food-leftovers" onclick="window.location.href='your-link-here' alt="Food Leftovers Image" class="box-image">
+                            <img src="/image/food.jpg" id = "box-food-leftovers" onclick="window.location.href='your-link-here' alt="Food Leftovers Image" class="box-image">
                         </div>
                 </div>
                 

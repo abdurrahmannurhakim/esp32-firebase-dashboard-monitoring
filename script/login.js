@@ -4,14 +4,13 @@
 
        // Your web app's Firebase configuration
        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            databaseURL: "YOUR_DATABASE_URL",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
+           authDomain: "fish-feeding-c9aeb.firebaseapp.com",
+           databaseURL: "https://fish-feeding-c9aeb-default-rtdb.firebaseio.com",
+           projectId: "fish-feeding-c9aeb",
+           storageBucket: "fish-feeding-c9aeb.appspot.com",
+           messagingSenderId: "345413774132",
+           appId: "1:345413774132:web:86dd1828a68f1b29ec1361"
+       };
 
        // Initialize Firebase
        const app = initializeApp(firebaseConfig);
@@ -46,7 +45,7 @@
                        
                        // Redirect to login page if token is not found
                        setTimeout(() => {
-                           window.location.href = 'dashboard.html';
+                           window.location.href = '/html/dashboard.html';
                        }, 2000); // 2 seconds delay
                    } else {
                        console.log('Username or password does not match');
